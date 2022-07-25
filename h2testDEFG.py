@@ -244,115 +244,115 @@ pyautogui.click(380, 234) #Write+verify
 pyautogui.click(650, 195) #Push OK
 os.system('"C:\\Jenkins\\_Public\\nircmd cmdwait 1000 win setsize ititle "H2testw | Progress" 300 258 390 320"')
 time.sleep(5)
-##----------------------------------------------
-programToExcute='C:\\Program Files\\BurnInTest\\bit.exe -D ' + run_time + ' -c LastUsedDEFG.bitcfg -R'
-print("programToExcute")
-print(programToExcute)
-statusFile = path.join("C:\\Jenkins-Report",'BurnInTest_status.txt')
-logFile = path.join("C:\\Jenkins-Report",'BurnInTest_result.log')
-
-print("excute burnin-test program")
-app = Application(backend="win32").start(programToExcute)
-time.sleep(1)
-os.system('"C:\\Jenkins\\_Public\\nircmd cmdwait 1000 win setsize ititle "BurnInTest" 413 0 750 585"')
-time.sleep(2)
-
-print ("Start : %s" % time.ctime())
-time.sleep( 76*float(run_time) )
-print ("End : %s" % time.ctime())
-
-mainWindow = app["BurnInTest V9.1 Pro (1002)"]
-TEST_PASS=False
-cleanFile(statusFile)
-
-with codecs.open(logFile,'r','utf-16') as f:
-    for line in f:
-        if line.find(u"TEST RUN PASSED") != -1:
-            TEST_PASS = True
-
-statusFileObject = open(statusFile,"w")
-if TEST_PASS:
-    statusFileObject.write("PASS")
-    statusFileObject.close()
-    print("PASS")
-    statusFileObject = open('C:\\Jenkins-Report\\report.txt',"a")
-    statusFileObject.write("\nBurnIn result = PASS")
-else:
-    statusFileObject.write("FAIL")
-    statusFileObject.close()
-    print("FAIL")
-    statusFileObject = open('C:\\Jenkins-Report\\report.txt',"a")
-    statusFileObject.write("\nBurnIn result = FAIL")
-####---------------
-os.system('"start /wait C:\\Jenkins\\_Public\\nircmd.exe savescreenshot "C:\\Jenkins-Report\\H2BurnIn_screenshot.png" 8 1 1148 576"')
-
-killProgram("bit.exe")
-
-print('Copy to clipboard')
-pyautogui.click(80,550) #Copy to clipboard
-####---------------
-CF_TEXT = 1
-kernel32 = ctypes.windll.kernel32
-kernel32.GlobalLock.argtypes = [ctypes.c_void_p]
-kernel32.GlobalLock.restype = ctypes.c_void_p
-kernel32.GlobalUnlock.argtypes = [ctypes.c_void_p]
-user32 = ctypes.windll.user32
-user32.GetClipboardData.restype = ctypes.c_void_p
-print('----------------------')
-print(get_clipboard_text())
-print('----------------------')
-####----------------
-
-text = get_clipboard_text()
-print(text)
-if text == '':
-    print('No text in clipboard')
-else:
-    print(text.upper())
-    uppercase = text.upper()
-    if uppercase != text:
-        new_clip = uppercase
-    else:
-        new_clip = text.lower()
-    print(new_clip)
-####----------------
-statusFileObject = open('C:\\Jenkins-Report\\report.txt',"a")
-statusFileObject.write("\nH2testw result = " + repr(new_clip))
-time.sleep(1)
-####----------------
-killProgram("h2testw.exe")
-####----------------
-logFile = path.join("C:\Jenkins-Report",'report.txt')
-TEST_PASS=True
-print("1111")
-f = open(logFile)
-for lines in f.readlines():
-    print("1112")
-    if lines.find(u"Error writing") != -1:
-        print("1113a")
-        TEST_PASS=False
-        f.close
-        break
-    elif lines.find(u"Error reading") != -1:
-        print("1113b")
-        TEST_PASS=False
-        f.close
-        break
-    else:
-        print("1114")
-        TEST_PASS=True
-        f.close
-        break
-print("1115")
-statusFileObject = open('C:\\Jenkins-Report\\report.txt',"a")
-if TEST_PASS:
-    statusFileObject.write("\nH2test[ColdData] and BurnInTest[HotData] verify successful\n")
-    statusFileObject.close()
-    print("PASS")
-else:
-    statusFileObject.write("\nH2test[ColdData] and BurnInTest[HotData] verify failure\n")
-    statusFileObject.close()
-    print("FAIL")
+####----------------------------------------------
+##programToExcute='C:\\Program Files\\BurnInTest\\bit.exe -D ' + run_time + ' -c LastUsedDEFG.bitcfg -R'
+##print("programToExcute")
+##print(programToExcute)
+##statusFile = path.join("C:\\Jenkins-Report",'BurnInTest_status.txt')
+##logFile = path.join("C:\\Jenkins-Report",'BurnInTest_result.log')
+##
+##print("excute burnin-test program")
+##app = Application(backend="win32").start(programToExcute)
+##time.sleep(1)
+##os.system('"C:\\Jenkins\\_Public\\nircmd cmdwait 1000 win setsize ititle "BurnInTest" 413 0 750 585"')
+##time.sleep(2)
+##
+##print ("Start : %s" % time.ctime())
+##time.sleep( 76*float(run_time) )
+##print ("End : %s" % time.ctime())
+##
+##mainWindow = app["BurnInTest V9.1 Pro (1002)"]
+##TEST_PASS=False
+##cleanFile(statusFile)
+##
+##with codecs.open(logFile,'r','utf-16') as f:
+##    for line in f:
+##        if line.find(u"TEST RUN PASSED") != -1:
+##            TEST_PASS = True
+##
+##statusFileObject = open(statusFile,"w")
+##if TEST_PASS:
+##    statusFileObject.write("PASS")
+##    statusFileObject.close()
+##    print("PASS")
+##    statusFileObject = open('C:\\Jenkins-Report\\report.txt',"a")
+##    statusFileObject.write("\nBurnIn result = PASS")
+##else:
+##    statusFileObject.write("FAIL")
+##    statusFileObject.close()
+##    print("FAIL")
+##    statusFileObject = open('C:\\Jenkins-Report\\report.txt',"a")
+##    statusFileObject.write("\nBurnIn result = FAIL")
+######---------------
+##os.system('"start /wait C:\\Jenkins\\_Public\\nircmd.exe savescreenshot "C:\\Jenkins-Report\\H2BurnIn_screenshot.png" 8 1 1148 576"')
+##
+##killProgram("bit.exe")
+##
+##print('Copy to clipboard')
+##pyautogui.click(80,550) #Copy to clipboard
+######---------------
+##CF_TEXT = 1
+##kernel32 = ctypes.windll.kernel32
+##kernel32.GlobalLock.argtypes = [ctypes.c_void_p]
+##kernel32.GlobalLock.restype = ctypes.c_void_p
+##kernel32.GlobalUnlock.argtypes = [ctypes.c_void_p]
+##user32 = ctypes.windll.user32
+##user32.GetClipboardData.restype = ctypes.c_void_p
+##print('----------------------')
+##print(get_clipboard_text())
+##print('----------------------')
+######----------------
+##
+##text = get_clipboard_text()
+##print(text)
+##if text == '':
+##    print('No text in clipboard')
+##else:
+##    print(text.upper())
+##    uppercase = text.upper()
+##    if uppercase != text:
+##        new_clip = uppercase
+##    else:
+##        new_clip = text.lower()
+##    print(new_clip)
+######----------------
+##statusFileObject = open('C:\\Jenkins-Report\\report.txt',"a")
+##statusFileObject.write("\nH2testw result = " + repr(new_clip))
+##time.sleep(1)
+######----------------
+##killProgram("h2testw.exe")
+######----------------
+##logFile = path.join("C:\Jenkins-Report",'report.txt')
+##TEST_PASS=True
+##print("1111")
+##f = open(logFile)
+##for lines in f.readlines():
+##    print("1112")
+##    if lines.find(u"Error writing") != -1:
+##        print("1113a")
+##        TEST_PASS=False
+##        f.close
+##        break
+##    elif lines.find(u"Error reading") != -1:
+##        print("1113b")
+##        TEST_PASS=False
+##        f.close
+##        break
+##    else:
+##        print("1114")
+##        TEST_PASS=True
+##        f.close
+##        break
+##print("1115")
+##statusFileObject = open('C:\\Jenkins-Report\\report.txt',"a")
+##if TEST_PASS:
+##    statusFileObject.write("\nH2test[ColdData] and BurnInTest[HotData] verify successful\n")
+##    statusFileObject.close()
+##    print("PASS")
+##else:
+##    statusFileObject.write("\nH2test[ColdData] and BurnInTest[HotData] verify failure\n")
+##    statusFileObject.close()
+##    print("FAIL")
 exit(0)
 
 
