@@ -169,7 +169,7 @@ os.system('"C:\\Jenkins\\_Public\\nircmd cmdwait 1000 win setsize ititle "Browse
 time.sleep(1)
 
 pyautogui.doubleClick(180, 220) #set Target
-pyautogui.typewrite('E:\\'')
+pyautogui.typewrite('E:\\')
 pyautogui.click(180, 20) #select space point
 pyautogui.click(180, 255) #push OK button
 pyautogui.click(33, 185) #Select DataVolume only
@@ -195,7 +195,7 @@ os.system('"C:\\Jenkins\\_Public\\nircmd cmdwait 1000 win setsize ititle "Browse
 time.sleep(1)
 
 pyautogui.doubleClick(180, 220) #set Target
-pyautogui.typewrite('F:\\'')
+pyautogui.typewrite('F:\\')
 pyautogui.click(180, 20) #select space point
 pyautogui.click(180, 255) #push OK button
 pyautogui.click(33, 185) #Select DataVolume only
@@ -221,7 +221,7 @@ os.system('"C:\\Jenkins\\_Public\\nircmd cmdwait 1000 win setsize ititle "Browse
 time.sleep(1)
 
 pyautogui.doubleClick(180, 220) #set Target
-pyautogui.typewrite('G:\\'')
+pyautogui.typewrite('G:\\')
 pyautogui.click(180, 20) #select space point
 pyautogui.click(180, 255) #push OK button
 pyautogui.click(33, 185) #Select DataVolume only
