@@ -119,8 +119,11 @@ cleanup()
 TEST_PASS=False
 cleanFile(logFile)
 os.system('"echo Y|del D:\*"')
-##SET_Key1 = sys.argv[1] #Select Target
 SET_Key1 = sys.argv[1] #Select Target
+SET_Key2 = sys.argv[2] #Select Target
+SET_Key3 = sys.argv[3] #Select Target
+SET_Key4 = sys.argv[4] #Select Target
+SET_Key5 = sys.argv[5] #Select Target
 #----------------------------
 
 fileList = glob.glob('C:\Jenkins\DownloadMicroCode\*_DLMC_log.txt')
@@ -143,12 +146,12 @@ os.system('"C:\\Jenkins\\_Public\\nircmd cmdwait 1000 win setsize ititle "Browse
 time.sleep(1)
 
 pyautogui.doubleClick(180, 220) #set Target
-pyautogui.typewrite('D:\\')
+pyautogui.typewrite(SET_Key1)
 pyautogui.click(180, 20) #select space point
 pyautogui.click(180, 255) #push OK button
 pyautogui.click(33, 185) #Select DataVolume only
 pyautogui.click(83, 185) #MB
-pyautogui.typewrite(SET_Key2)
+pyautogui.typewrite(SET_Key5)
 
 pyautogui.click(296, 234) #endless verify
 
@@ -169,12 +172,12 @@ os.system('"C:\\Jenkins\\_Public\\nircmd cmdwait 1000 win setsize ititle "Browse
 time.sleep(1)
 
 pyautogui.doubleClick(180, 220) #set Target
-pyautogui.typewrite('E:\\')
+pyautogui.typewrite(SET_Key2)
 pyautogui.click(180, 20) #select space point
 pyautogui.click(180, 255) #push OK button
 pyautogui.click(33, 185) #Select DataVolume only
 pyautogui.click(83, 185) #MB
-pyautogui.typewrite(SET_Key2)
+pyautogui.typewrite(SET_Key5)
 
 pyautogui.click(296, 234) #endless verify
 
@@ -195,12 +198,12 @@ os.system('"C:\\Jenkins\\_Public\\nircmd cmdwait 1000 win setsize ititle "Browse
 time.sleep(1)
 
 pyautogui.doubleClick(180, 220) #set Target
-pyautogui.typewrite('F:\\')
+pyautogui.typewrite(SET_Key3)
 pyautogui.click(180, 20) #select space point
 pyautogui.click(180, 255) #push OK button
 pyautogui.click(33, 185) #Select DataVolume only
 pyautogui.click(83, 185) #MB
-pyautogui.typewrite(SET_Key1)
+pyautogui.typewrite(SET_Key5)
 
 pyautogui.click(296, 234) #endless verify
 
@@ -221,12 +224,12 @@ os.system('"C:\\Jenkins\\_Public\\nircmd cmdwait 1000 win setsize ititle "Browse
 time.sleep(1)
 
 pyautogui.doubleClick(180, 220) #set Target
-pyautogui.typewrite('G:\\')
+pyautogui.typewrite(SET_Key4)
 pyautogui.click(180, 20) #select space point
 pyautogui.click(180, 255) #push OK button
 pyautogui.click(33, 185) #Select DataVolume only
 pyautogui.click(83, 185) #MB
-pyautogui.typewrite(SET_Key1)
+pyautogui.typewrite(SET_Key5)
 
 pyautogui.click(296, 234) #endless verify
 
