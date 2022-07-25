@@ -147,7 +147,7 @@ time.sleep(1)
 
 pyautogui.doubleClick(180, 220) #set Target
 pyautogui.typewrite(SET_Key1)
-pyautogui.click(180, 20) #select space point
+pyautogui.doubleClick(180, 20) #select space point
 pyautogui.click(180, 255) #push OK button
 pyautogui.click(33, 185) #Select DataVolume only
 pyautogui.click(83, 185) #MB
@@ -158,7 +158,7 @@ pyautogui.click(296, 234) #endless verify
 pyautogui.click(80, 234) #Write+verify
 pyautogui.click(350, 195) #Push OK
 os.system('"C:\\Jenkins\\_Public\\nircmd cmdwait 1000 win setsize ititle "H2testw | Progress" 0 258 390 320"')
-time.sleep(1)
+time.sleep(5)
 
 ##----------------------------------------------
 app2 = Application(backend="win32").start(r"C:\\Jenkins\\H2testw\\h2testw.exe")
@@ -173,7 +173,7 @@ time.sleep(1)
 
 pyautogui.doubleClick(180, 220) #set Target
 pyautogui.typewrite(SET_Key2)
-pyautogui.click(180, 20) #select space point
+pyautogui.doubleClick(180, 20) #select space point
 pyautogui.click(180, 255) #push OK button
 pyautogui.click(33, 185) #Select DataVolume only
 pyautogui.click(83, 185) #MB
@@ -184,7 +184,7 @@ pyautogui.click(296, 234) #endless verify
 pyautogui.click(80, 234) #Write+verify
 pyautogui.click(350, 195) #Push OK
 os.system('"C:\\Jenkins\\_Public\\nircmd cmdwait 1000 win setsize ititle "H2testw | Progress" 0 258 390 320"')
-time.sleep(1)
+time.sleep(5)
 
 ##----------------------------------------------
 app3 = Application(backend="win32").start(r"C:\\Jenkins\\H2testw\\h2testw.exe")
@@ -199,7 +199,7 @@ time.sleep(1)
 
 pyautogui.doubleClick(180, 220) #set Target
 pyautogui.typewrite(SET_Key3)
-pyautogui.click(180, 20) #select space point
+pyautogui.doubleClick(180, 20) #select space point
 pyautogui.click(180, 255) #push OK button
 pyautogui.click(33, 185) #Select DataVolume only
 pyautogui.click(83, 185) #MB
@@ -210,7 +210,7 @@ pyautogui.click(296, 234) #endless verify
 pyautogui.click(80, 234) #Write+verify
 pyautogui.click(350, 195) #Push OK
 os.system('"C:\\Jenkins\\_Public\\nircmd cmdwait 1000 win setsize ititle "H2testw | Progress" 0 258 390 320"')
-time.sleep(1)
+time.sleep(5)
 
 ##----------------------------------------------
 app4 = Application(backend="win32").start(r"C:\\Jenkins\\H2testw\\h2testw.exe")
@@ -225,7 +225,7 @@ time.sleep(1)
 
 pyautogui.doubleClick(180, 220) #set Target
 pyautogui.typewrite(SET_Key4)
-pyautogui.click(180, 20) #select space point
+pyautogui.doubleClick(180, 20) #select space point
 pyautogui.click(180, 255) #push OK button
 pyautogui.click(33, 185) #Select DataVolume only
 pyautogui.click(83, 185) #MB
@@ -236,7 +236,7 @@ pyautogui.click(296, 234) #endless verify
 pyautogui.click(80, 234) #Write+verify
 pyautogui.click(350, 195) #Push OK
 os.system('"C:\\Jenkins\\_Public\\nircmd cmdwait 1000 win setsize ititle "H2testw | Progress" 0 258 390 320"')
-time.sleep(1)
+time.sleep(5)
 ##----------------------------------------------
 programToExcute='C:\\Program Files\\BurnInTest\\bit.exe -D ' + run_time + ' -c LastUsedDEFG.bitcfg -R'
 print("programToExcute")
