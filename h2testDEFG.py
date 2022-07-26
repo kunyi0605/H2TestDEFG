@@ -164,10 +164,6 @@ time.sleep(2)
 ##----------------------------------------------
 app2 = Application(backend="win32").start(r"C:\\Jenkins\\H2testw\\h2testw.exe")
 app2.H2testw.MoveWindow(100, 0)
-os.remove("D:\*.tmp")
-os.remove("E:\*.tmp")
-os.remove("F:\*.tmp")
-os.remove("G:\*.tmp")
 time.sleep(2)
 pyautogui.click(193, 43) #select English
 pyautogui.click(440, 85) #Select target
