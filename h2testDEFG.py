@@ -149,6 +149,9 @@ pyautogui.doubleClick(180, 220) #set Target
 pyautogui.typewrite(SET_Key1)
 pyautogui.doubleClick(180, 20) #select space point
 time.sleep(1)
+pyautogui.Click(180, 220) #set Target
+time.sleep(1)
+pyautogui.Click(180, 20) #select space point
 pyautogui.click(180, 255) #push OK button
 pyautogui.click(33, 185) #Select DataVolume only
 pyautogui.click(83, 185) #MB
@@ -177,6 +180,8 @@ pyautogui.typewrite(SET_Key2)
 pyautogui.doubleClick(280, 20) #select space point
 time.sleep(1)
 pyautogui.click(280, 220) #set Target
+time.sleep(1)
+pyautogui.click(280, 20) #select space point
 pyautogui.click(280, 255) #push OK button
 pyautogui.click(133, 185) #Select DataVolume only
 pyautogui.click(183, 185) #MB
@@ -205,6 +210,8 @@ pyautogui.typewrite(SET_Key3)
 pyautogui.doubleClick(380, 20) #select space point
 time.sleep(1)
 pyautogui.click(380, 220) #set Target
+time.sleep(1)
+pyautogui.click(280, 20) #select space point
 pyautogui.click(380, 255) #push OK button
 pyautogui.click(233, 185) #Select DataVolume only
 pyautogui.click(283, 185) #MB
@@ -233,6 +240,8 @@ pyautogui.typewrite(SET_Key4)
 pyautogui.doubleClick(480, 20) #select space point
 time.sleep(1)
 pyautogui.click(480, 220) #set Target
+time.sleep(1)
+pyautogui.click(280, 20) #select space point
 pyautogui.click(480, 255) #push OK button
 pyautogui.click(333, 185) #Select DataVolume only
 pyautogui.click(383, 185) #MB
