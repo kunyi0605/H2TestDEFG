@@ -159,7 +159,7 @@ pyautogui.click(296, 234) #endless verify
 pyautogui.click(80, 234) #Write+verify
 pyautogui.click(350, 195) #Push OK
 os.system('"C:\\Jenkins\\_Public\\nircmd cmdwait 1000 win setsize ititle "H2testw | Progress" 0 258 390 320"')
-time.sleep(5)
+time.sleep(2)
 
 ##----------------------------------------------
 app2 = Application(backend="win32").start(r"C:\\Jenkins\\H2testw\\h2testw.exe")
@@ -189,7 +189,7 @@ pyautogui.click(396, 234) #endless verify
 pyautogui.click(180, 234) #Write+verify
 pyautogui.click(450, 195) #Push OK
 os.system('"C:\\Jenkins\\_Public\\nircmd cmdwait 1000 win setsize ititle "H2testw | Progress" 100 258 390 320"')
-time.sleep(5)
+time.sleep(2)
 
 ##----------------------------------------------
 app3 = Application(backend="win32").start(r"C:\\Jenkins\\H2testw\\h2testw.exe")
@@ -216,7 +216,7 @@ pyautogui.click(496, 234) #endless verify
 pyautogui.click(280, 234) #Write+verify
 pyautogui.click(550, 195) #Push OK
 os.system('"C:\\Jenkins\\_Public\\nircmd cmdwait 1000 win setsize ititle "H2testw | Progress" 200 258 390 320"')
-time.sleep(5)
+time.sleep(2)
 
 ##----------------------------------------------
 app4 = Application(backend="win32").start(r"C:\\Jenkins\\H2testw\\h2testw.exe")
@@ -243,7 +243,7 @@ pyautogui.click(596, 234) #endless verify
 pyautogui.click(380, 234) #Write+verify
 pyautogui.click(650, 195) #Push OK
 os.system('"C:\\Jenkins\\_Public\\nircmd cmdwait 1000 win setsize ititle "H2testw | Progress" 300 258 390 320"')
-time.sleep(5)
+time.sleep(2)
 ####----------------------------------------------
 ##programToExcute='C:\\Program Files\\BurnInTest\\bit.exe -D ' + run_time + ' -c LastUsedDEFG.bitcfg -R'
 ##print("programToExcute")
